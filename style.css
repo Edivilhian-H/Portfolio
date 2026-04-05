@@ -63,3 +63,17 @@ main .navigation ul li a {
   display: block;
   margin: 16px 24px;
 }
+
+main nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+main nav ul li {
+  display: inline;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
