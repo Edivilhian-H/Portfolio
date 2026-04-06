@@ -32,10 +32,6 @@ header img {
   margin-bottom: 8px;
 }
 
-main {
-  width: 360px;
-}
-
 main .navigation {
   display: flex;
   flex-direction: column;
@@ -46,34 +42,40 @@ main .navigation {
 main .navigation ul {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 main .navigation ul li {
-  width: 312px;
-  height: 56px;
   text-align: center;
-  border-radius: 8px;
-  border: 1px solid var(--stroke-color-dark-mode, rgba(255, 255, 255, 0.5));
-  background: var(--surface-color-dark-mode, rgba(255, 255, 255, 0.1));
-  backdrop-filter: blur(4px);
 }
 
 main .navigation ul li a {
+  padding: 16px 24px;
   display: block;
-  margin: 16px 24px;
+  border-radius: 8px;
+
+  font-weight: 500;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: background 0.3s;
 }
 
-main nav {
+main .navigation ul li a:hover {
+  border: 1.5px solid #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+main .socialLinks {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
 }
 
-main nav ul li {
-  display: inline;
-  width: 32px;
-  height: 32px;
-  display: block;
+.socialLinks ul {
+  display: flex;
+  gap: 24px;
 }
