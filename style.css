@@ -17,6 +17,8 @@ body * {
 #container {
   width: 360px;
   margin: auto;
+
+  padding: 0 24px;
 }
 
 header {
@@ -73,9 +75,43 @@ main .socialLinks {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+
+  padding: 24px 0px;
 }
 
 .socialLinks ul {
   display: flex;
-  gap: 24px;
+}
+
+.socialLinks ul li a {
+  font-size: 24px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.socialLinks ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0px;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer p a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
 }
