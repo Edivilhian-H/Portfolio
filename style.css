@@ -6,12 +6,28 @@
   text-decoration: none;
 }
 
+:root {
+  --background-img-mode: url(./assets/bg-mobile.jpg);
+  --text-color: #ffffff;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-mode-hover: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  --background-img-mode: url(./assets/bg-mobile-light.jpg);
+  --text-color: #000;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-mode-hover: rgba(0, 0, 0, 0.02);
+}
+
 body {
-  background: url(./assets/bg-mobile.jpg) no-repeat top center / cover;
+  background: var(--background-img-mode) no-repeat top center / cover;
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 #container {
@@ -58,16 +74,16 @@ main .navigation ul li a {
 
   font-weight: 500;
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
   -webkit-backdrop-filter: blur(4px);
 
   transition: background 0.3s;
 }
 
 main .navigation ul li a:hover {
-  border: 1.5px solid #fff;
-  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-mode-hover);
 }
 
 main .socialLinks {
@@ -95,7 +111,7 @@ main .socialLinks {
 }
 
 .socialLinks ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--surface-color-mode-hover);
 }
 
 footer {
@@ -111,7 +127,6 @@ footer p {
 }
 
 footer p a {
-  color: #fff;
   font-weight: 500;
   text-decoration: underline;
 }
