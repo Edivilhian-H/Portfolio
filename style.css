@@ -12,6 +12,7 @@
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-mode-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color-mode: rgba(255, 255, 255, 0.2);
 }
 
 .light {
@@ -20,6 +21,7 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-mode-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color-mode: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -111,7 +113,7 @@ main .socialLinks {
 }
 
 .socialLinks ul li a:hover {
-  background-color: var(--surface-color-mode-hover);
+  background-color: var(--highlight-color-mode);
 }
 
 footer {
