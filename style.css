@@ -4,10 +4,12 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  border: none;
 }
 
 :root {
   --background-img-mode: url(./assets/bg-mobile.jpg);
+  --img-themeToggle: url(./assets/icon-sun.svg);
   --text-color: #ffffff;
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
@@ -17,6 +19,7 @@
 
 .light {
   --background-img-mode: url(./assets/bg-mobile-light.jpg);
+  --img-themeToggle: url(./assets/MoonStars.svg);
   --text-color: #000;
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
@@ -35,7 +38,6 @@ body * {
 #container {
   width: 360px;
   margin: auto;
-
   padding: 0 24px;
 }
 
@@ -50,6 +52,36 @@ header img {
   margin: auto;
   display: block;
   margin-bottom: 8px;
+}
+
+.themeToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  margin: auto;
+}
+
+.themeToggle button {
+  background: var(--img-themeToggle) no-repeat center;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+  margin-left: -45px;
+  position: absolute;
+
+  z-index: 1;
+}
+
+.themeToggle span {
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color, rgba(255, 255, 255, 0.5));
+  background: var(--surface-color, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(4px);
+
+  z-index: -1;
 }
 
 main .navigation {
